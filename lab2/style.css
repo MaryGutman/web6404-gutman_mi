@@ -1,0 +1,170 @@
+/* селектор по тегу */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    background-color: #111;
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #ffd60a;
+    margin-top: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    color: #ffd60a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* селектор по id */
+#content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+/* селектор по классу */
+.header {
+    background-color: #000;
+    border-bottom: 4px solid #ffd60a;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffd60a;
+    letter-spacing: 4px;
+}
+
+.nav a {
+    color: #e6e6e6;
+    margin-left: 18px;
+    padding-bottom: 4px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+/* псевдокласс */
+.nav a:hover,
+.nav a.active {
+    color: #ffd60a;
+    border-bottom: 2px solid #ffd60a;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 1.05em;
+    color: #b8b8b8;
+}
+
+.accent {
+    color: #ffd60a;
+    font-weight: bold;
+}
+
+/* карточки */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-left: 5px solid #ffd60a;
+    padding: 20px 25px;
+    margin: 25px 0;
+}
+
+/* главный блок */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-img {
+    margin: 20px auto;
+    border: 3px solid #ffd60a;
+}
+
+.album-img {
+    width: 220px;
+    border: 2px solid #333;
+    margin-bottom: 15px;
+}
+
+/* Список состава */
+.members {
+    list-style: none;
+    padding: 0;
+}
+
+.members li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #333;
+}
+
+/* таблица с выравниванием */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #1a1a1a;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #333;
+}
+
+.table thead th {
+    background-color: #ffd60a;
+    color: #000;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr:hover {
+    background-color: #262626;
+}
+
+
+/* три вида выравнивания */
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/* футер */
+.footer {
+    background-color: #000;
+    border-top: 4px solid #ffd60a;
+    text-align: center;
+    padding: 20px;
+    color: #8a8a8a;
+    font-size: 0.9em;
+}
