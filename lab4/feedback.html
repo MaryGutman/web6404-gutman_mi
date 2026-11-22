@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nirvana — Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="page">
+
+    <header class="header">
+        <div class="header__logo">NIRVANA</div>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="music.html" class="nav__link">Дискография</a>
+            <a href="history.html" class="nav__link">История</a>
+            <a href="feedback.html" class="nav__link nav__link--active">Обратная связь</a>
+        </nav>
+    </header>
+
+    <main id="content" class="content">
+
+        <h1>Обратная связь</h1>
+        <p class="content__subtitle">
+            Напиши, какой альбом Nirvana нравится тебе больше всего,
+            и поделись впечатлениями.
+        </p>
+
+        <section class="card card--feedback">
+            <h2 class="card__title">Форма для посетителей</h2>
+
+            <form id="feedback-form" class="form">
+
+                <label class="form__label" for="name">Имя</label>
+                <input class="form__input" type="text" id="name" name="name"
+                       placeholder="Твоё имя" required>
+
+                <label class="form__label" for="email">Электронная почта</label>
+                <input class="form__input" type="email" id="email" name="email"
+                       placeholder="example@mail.ru" required>
+
+                <label class="form__label" for="album">Любимый альбом</label>
+                <select class="form__select" id="album" name="album" required>
+                    <option value="">Выбери альбом</option>
+                    <option>Bleach</option>
+                    <option>Nevermind</option>
+                    <option>In Utero</option>
+                </select>
+
+                <label class="form__label" for="message">Сообщение</label>
+                <textarea class="form__textarea" id="message" name="message"
+                          placeholder="Почему именно этот альбом?" required></textarea>
+
+                <label class="form__consent">
+                    <input class="form__checkbox" type="checkbox" name="consent" required>
+                    Согласен(-на) на обработку персональных данных
+                </label>
+
+                <button class="form__button" type="submit">Отправить</button>
+
+                <p id="result" class="form__result"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 Фан-сайт Nirvana.</p>
+    </footer>
+
+</body>
+</html>

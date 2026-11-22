@@ -1,0 +1,278 @@
+/* Цвета сайта */
+:root {
+    --bg: #111;
+    --text: #e6e6e6;
+    --accent: #ffd60a;
+    --white: #fff;
+    --black: #000;
+    --muted: #b8b8b8;
+    --card: #1a1a1a;
+    --border: #333;
+    --footer-text: #8a8a8a;
+}
+
+/* селектор по тегу */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--accent);
+    margin-top: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* селектор по id */
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+/* селектор по классу */
+.header {
+    background-color: var(--black);
+    border-bottom: 4px solid var(--accent);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 4px;
+}
+
+.nav__link {
+    color: var(--text);
+    margin-left: 18px;
+    padding-bottom: 4px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+/* псевдокласс */
+.nav__link:hover,
+.nav__link--active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    text-decoration: none;
+}
+
+.content__subtitle,
+.hero__subtitle {
+    font-size: 1.05em;
+    color: var(--muted);
+}
+
+.hero__accent,
+.card__accent,
+.members__accent {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* карточки */
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    padding: 20px 25px;
+    margin: 25px 0;
+}
+
+/* главный блок */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero__img {
+    margin: 20px auto;
+    border: 3px solid var(--accent);
+    animation: appear 2s;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card__img {
+    width: 220px;
+    border: 2px solid var(--border);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+
+.card__img:hover {
+    transform: rotate(5deg);
+}
+
+/* Список состава */
+.members {
+    list-style: none;
+    padding: 0;
+}
+
+.members__item {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+/* таблица с выравниванием */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: var(--card);
+}
+
+.table__cell {
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+}
+
+.table thead .table__cell {
+    background-color: var(--accent);
+    color: var(--black);
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* три вида выравнивания */
+.table__cell--left {
+    text-align: left;
+}
+
+.table__cell--center {
+    text-align: center;
+}
+
+.table__cell--right {
+    text-align: right;
+}
+
+/* футер */
+.footer {
+    background-color: var(--black);
+    border-top: 4px solid var(--accent);
+    text-align: center;
+    padding: 20px;
+    color: var(--footer-text);
+    font-size: 0.9em;
+}
+
+/* Главная — Flexbox */
+.page--home .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.page--home .hero {
+    width: 100%;
+}
+
+.page--home .card {
+    flex: 1 1 40%;
+    margin: 0;
+}
+
+.page--home .card--wide {
+    flex: 1 1 100%;
+}
+
+
+/* Дискография — Grid */
+.page--music .content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.page--music .content__title,
+.page--music .content__subtitle,
+.page--music .table {
+    grid-column: 1;
+}
+
+
+
+/* Форма обратной связи */
+.card--feedback {
+    max-width: 600px;
+}
+
+.form__label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--muted);
+    border-radius: 5px;
+}
+
+.form__textarea {
+    height: 150px;
+}
+
+.form__consent {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.form__checkbox {
+    width: auto;
+}
+
+.form__button {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    border: none;
+    border-radius: 5px;
+}
